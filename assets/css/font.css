@@ -1,0 +1,19 @@
+@font-face {
+   font-family: 'eurofurence';
+   src: url('../font-style/eurof55.ttf') format('truetype');
+}
+
+
+h1,h2,h3 {
+		text-align: center;
+		font-family: eurofurence;
+
+	}
+p,h1,h2,h3,h4,h5,h6,small {
+		font-family: eurofurence;
+	}
+
+
+#big{
+		border:2px solid black;
+	}

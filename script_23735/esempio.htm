@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+
+	<title>Calendario eventi - Esempio JavaScript scaricato da HTML.it</title>
+	<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="it" />
+	<meta name="Robots" content="All" />
+	<meta name="Description" content="HTML.it - il sito italiano sul Web publishing" />
+	<meta name="Keywords" content="Lo script offre la possibilità di creare un comodo calendario degli eventi. Una volta creato il calendario con una tabella HTML, è possibile creare dei link per i giorni del mese a cui sono associati eventi, fatti o appuntamenti." />
+	<meta name="Owner" content="HTML.it srl" /> 
+	<meta name="Author" content="HTML.it srl" />  
+	<meta name="Copyright" content="HTML.it srl" />
+
+<script language="Javascript" type="text/javascript">
+	<!-- 
+		eventi = new Array
+		eventi[1] = "Evento 1"
+		eventi[2] = "Evento 2"
+		eventi[4] = "Evento 3"
+		eventi[6] = "Evento 4"
+		eventi[7] = "Evento 5"
+		eventi[8] = "Evento 6"
+		eventi[13] = "Evento 7"
+		eventi[15] = "Evento 8"
+		eventi[17] = "Evento 9"
+		eventi[20] = "Evento 10"
+		eventi[25] = "Evento 11"
+		eventi[27] = "Evento 12"
+	
+		function mostraEvento(oggi) {
+			var display = document.getElementById("divEventi");
+			display.innerHTML = eventi[oggi]
+			}		
+
+	-->
+	</script>	
+
+</head>
+<body >
+<br /><br />
+<div align="center">
+
+
+
+<table cellspacing="2" cellpadding="2">
+	<tr>
+		<th colspan="7">Ottobre 2004</th>
+		<td rowspan="6">&nbsp;</td>
+	</tr>
+	<tr align="right">
+		<td><a href="javascript:mostraEvento(1)">1</a></td>
+		<td><a href="javascript:mostraEvento(2)">2</a></td>
+		<td>3</td>
+		<td><a href="javascript:mostraEvento(4)">4</a></td>
+		<td>5</td>
+		<td><a href="javascript:mostraEvento(6)">6</a></td>
+		<td><a href="javascript:mostraEvento(7)">7</a></td>
+	</tr>
+	<tr align="right">
+		<td><a href="javascript:mostraEvento(8)">8</a></td>
+		<td>9</td>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+		<td><a href="javascript:mostraEvento(13)">13</a></td>
+		<td>14</td>
+	</tr>
+	<tr align="right">
+		<td><a href="javascript:mostraEvento(15)">15</a></td>
+		<td>16</td>
+		<td><a href="javascript:mostraEvento(17)">17</a></td>
+		<td>18</td>
+		<td>19</td>
+		<td><a href="javascript:mostraEvento(20)">20</a></td>
+		<td>21</td>
+	</tr>
+	<tr align="right">
+		<td>22</td>
+		<td>23</td>
+		<td>24</td>
+		<td><a href="javascript:mostraEvento(25)">25</a></td>
+		<td>26</td>
+		<td><a href="javascript:mostraEvento(27)">27</a></td>
+		<td>28</td>
+	</tr>
+	<tr align="right">
+		<td>29</td>
+		<td>30</td>
+		<td colspan="5" align="left">31</td>
+	</tr>
+</table>
+
+<div id="divEventi" style="background: gray;">Box eventi</div>
+
+
+</div>
+<br /><br /><br /><br /><br /><br />
+	<div align="center">
+<a href="http://www.html.it"><img src="logo_htmlit.gif" alt="JavaScript scaricato da HTML.it" border="0" width="50" height="50" /></a>
+	</div>
+	
+
+</body>
+</html>

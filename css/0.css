@@ -1,0 +1,221 @@
+nav{
+  background-color:white;
+height:auto;
+
+}
+
+body{
+   font-family: ‘Courier New’, Courier, monospace;
+   background-color: #E1EFE6;
+}
+a{
+  font-style: oblique;
+}
+a:link {
+    color:#160C28;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#160C28;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#160C28;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color:#160C28;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 15px;
+}
+
+body {
+  color: black;
+}
+div{
+  color:black;
+  text-align: center;
+}
+.scelte{
+  color:black;
+  background-color:#EFCB68;
+}
+body{
+	font-size:100%;
+	color:#333;
+	font-family:sans-serif;
+}
+
+/*container*/
+#drop-menu {
+	margin: 0 auto;
+	padding: 0;
+	width: auto;
+  height: 0px;
+}
+
+/*menu*/
+
+ul#menu {
+	margin:0px 0 0;
+	padding: 0;
+	list-style: none;
+	float:left;
+	width: auto;
+	background-color: white;
+	font-size:100%;
+}
+
+ul#menu li {
+	margin:0;
+	padding:0;
+	float:left;
+	display: block;
+	position: relative;
+}
+
+ul#menu li a {
+	float: left;
+	color: black;
+	text-transform: uppercase;
+	text-decoration:none;
+}
+
+ul#menu li a:hover {
+	background: #666;
+	color:white;
+}
+
+ul#menu ul {
+	margin:2px 0 0;
+	padding:0;
+	display:inline-block;
+	list-style: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	z-index:9999;
+	background: #444;
+}
+
+ul#menu li:hover ul {
+	opacity: 1;
+	visibility: visible;
+}
+
+ul#menu ul li {
+	float: none;
+	display: block;
+	border: 0;
+}
+
+ul#menu ul a {
+	padding:0px;
+	width: auto;
+	display: block;
+	white-space: nowrap;
+	float: none;
+	text-transform: none;
+}
+
+ul#menu ul a:hover {
+	background-color: #0186ba;
+	color:#fff
+}
+
+
+.opacizzato {
+ align-items: center;
+ align-self: center;
+ align-content: center;
+
+}
+
+ul {list-style-type: none;}
+
+/* Month header */
+.month {
+    padding: 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
