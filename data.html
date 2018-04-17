@@ -28,7 +28,7 @@ echo "<p>You have successfully connected to $database</p>";
 
 // quick script to display all the tables in your database
 // run the mysql query and check the result
-$result = mysql_query('show tables');
+$result = mysql_query('SELECT * FROM attivita;');
 if (!$result) {
     die('Invalid query: ' . mysql_error());
 }
