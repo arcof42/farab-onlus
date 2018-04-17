@@ -7,25 +7,21 @@
 <body>
 <!-- connessione al DB -->
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "faraba";
+$servername = "sql212.epizy.com";
+$username = "epiz_21944315";
+$password = "7401DBilomeno.MDN";
+$dbname = "epiz_21944315_faraba";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 //COMANDI da inserimento nella tabella e inserimenti multipli
-$sql = "INSERT INTO newsletter (mail)
-VALUES ('pesce@gmail.com');";
-$sql .= "INSERT INTO newsletter (mail)
-VALUES ('gay@gmail.com');";
-$sql .= "INSERT INTO newsletter (mail)
-VALUES ('mutandinesporche2099@gmail.com')";
+$sql = "SELECT attivita;"
+
 
 //verificare se tutto è andato bene
 if ($conn->multi_query($sql) === TRUE) {
