@@ -7,23 +7,22 @@
 <body>
 <!-- connessione al DB -->
 <?php
-  private $nomehost = "sql2.freesqldatabase.com";
-  private $nomeuser = "sql2233206";
-  private $password = "iN7!hU1!";
-  private $dbname = "sql2233206";
 
-  $link = mysql_connect('nomehost','nomeuser','password');
-  if (!$link) {
-    die (echo 'Non riesco a connettermi : ' . mysql_error());
-  } else { echo 'connesso';}
+  $host="sql2.freesqldatabase.com"; // Hostname
+  $username="sql2233206"; // Mysql username
+  $password="iN7!hU1!"; // Mysql password
+  $db_name="sql2233206"; //Nome del Database
+  $tbl_name="attivita"; // Nome della Tabella
+  $db = mysql_connect($localhost,$username,$password);
+  mysql_select_db($db_name,$db);
 
-  $db_selected = mysql_select_db('sql2233206',$link);
-  if(!$db_selected){
-    die (echo 'Errore nerlla selezione del database : ' . mysql_error());
-  }
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
-  echo 'connesso';
+  mysql_query("SELECT ".$tbl_name,$db) || die(mysql_error()); 
 
+  /* quindi i dati sono stati salvati nel database e l'utente è registrato */
+  mysql_close($db);
 
 ?>
 
