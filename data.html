@@ -20,7 +20,7 @@ if (!$link) {
 // make foo the current db
 $db_selected = mysql_select_db($database, $link);
 if (!$db_selected) {
-    die ('Can\'t connect : ' . mysql_error());
+    die ('<p>Can\'t connect : </p>' . mysql_error());
 }
 
 // if you've got this far, the database connection has been made
