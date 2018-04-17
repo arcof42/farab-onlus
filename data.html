@@ -15,14 +15,14 @@
   $link = mysql_connect('nomehost','nomeuser','password');
   if (!$link) {
     die (echo 'Non riesco a connettermi : ' . mysql_error());
-  }
+  } else { echo 'connesso';}
 
   $db_selected = mysql_select_db('sql2233206',$link);
   if(!$db_selected){
     die (echo 'Errore nerlla selezione del database : ' . mysql_error());
   }
 
-
+  echo 'connesso';
 
 
 ?>
