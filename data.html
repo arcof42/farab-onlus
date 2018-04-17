@@ -7,18 +7,24 @@
 <body>
 <!-- connessione al DB -->
 <?php
-   $localhost = "https://sql2.freesqldatabase.com";
-   $username = "sql2233206";
-   $password = "iN7!hU1!";
-   $dbname = "sql2233206";
+  private $nomehost = "https://sql2.freesqldatabase.com";
+  private $nomeuser = "sql2233206";
+  private $password = "iN7!hU1!";
+  private $dbname = "sql2233206";
 
-  $mysqli = new mysqli('localhost', 'username', 'password', 'dbname');
-    if ($mysqli->connect_error) {
-        die('Errore di connessione (' . $mysqli->connect_errno . ') '
-        . $mysqli->connect_error);
-    } else {
-        echo 'Connesso. ' . $mysqli->host_info . "\n";
-    }
+  $link = mysql_connect('nomehost','nomeuser','password');
+  if (!$link) {
+    die ('Non riesco a connettermi : ' . mysql_error());
+  }
+
+  $db_selected = mysql_select_db('sql2233206',$link);ù
+  if(!$db_selected){
+    die ('Errore nerlla selezione del database : ' . mysql_error());
+  }
+
+  echo 'connesso con successo';
+$sql='SELECT attivita';
+  mysql_close($link);
 
 
 ?>
