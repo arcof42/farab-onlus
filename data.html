@@ -7,23 +7,41 @@
 <body>
 <!-- connessione al DB -->
 <?php
+$database = 'sql2233206';
+$username = 'sql2233206';
+$password = 'iN7!hU1!';
+$hostname = 'http://sql2.freesqldatabase.com/';
 
-  $host="sql2.freesqldatabase.com"; // Hostname
-  $username="sql2233206"; // Mysql username
-  $password="iN7!hU1!"; // Mysql password
-  $db_name="sql2233206"; //Nome del Database
-  $tbl_name="attivita"; // Nome della Tabella
-  $db = mysql_connect($localhost,$username,$password);
-  mysql_select_db($db_name,$db);
+$link = mysql_connect($hostname, $username, $password);
+if (!$link) {
+    die('Not connected : ' . mysql_error());
+}
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+// make foo the current db
+$db_selected = mysql_select_db($database, $link);
+if (!$db_selected) {
+    die ('Can\'t connect : ' . mysql_error());
+}
 
-  mysql_query("SELECT ".$tbl_name,$db) || die(mysql_error()); 
+// if you've got this far, the database connection has been made
+echo "<p>You have successfully connected to $database</p>";
 
-  /* quindi i dati sono stati salvati nel database e l'utente è registrato */
-  mysql_close($db);
+// quick script to display all the tables in your database
+// run the mysql query and check the result
+$result = mysql_query('show tables');
+if (!$result) {
+    die('Invalid query: ' . mysql_error());
+}
 
+// loop through the result and display
+echo "<p>Tables within in $database</p>";
+if(is_array(mysql_fetch_array($result))) {
+	while ($row = mysql_fetch_array($result)) {
+	    echo $row[0] . '<br>';
+	}
+} else {
+	echo "<p>No tables found</p>";
+}
 ?>
 
 
